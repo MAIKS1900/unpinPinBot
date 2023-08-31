@@ -1,0 +1,9 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Deploy-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages - Python
+        uses: evamaxfield/github-pages-deploy-action-python@2.1.0
