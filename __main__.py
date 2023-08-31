@@ -12,7 +12,7 @@ def unpin_message(message: telebot.types.Message):
     bot.unpin_chat_message(message.chat.id, message.id)
 
 
-@bot.message_handler(func=lambda message: True)
+@bot.message_handler(func=lambda message: True, content_types=telebot.util.content_type_media)
 def message_all_type(message: telebot.types.Message):
     if message.from_user.id == 777000:
         unpin_message(message)
